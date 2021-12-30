@@ -18,21 +18,25 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
     }()
     private var alarms: [Alarm] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func setupView() {
         view.backgroundColor = .white
         alarms = DataManager.getAlarms()
+        alarms.sort(by: {$0.time < $1.time})
         collection.register(CollectionAlarmView.self, forCellWithReuseIdentifier: "\(CollectionAlarmView.self)")
         collection.delegate = self
         collection.dataSource = self
         collection.backgroundColor = #colorLiteral(red: 0.9353832006, green: 0.9105941057, blue: 0.6760123968, alpha: 1)
         collection.alwaysBounceVertical = true
         collection.contentInsetAdjustmentBehavior = .always
-        collection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
         view.addSubview(collection)
         collection.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
         collection.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
         collection.pin(to: view, .left, .right)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
     }
     
     private func addNewAlarm(_ collection: UICollectionView, time: String, description: String, topMargin: Double) {
@@ -53,7 +57,12 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
         }
         let alarm = alarms[indexPath.row]
         cell.setDescription(description: alarm.descriptionLabel)
-        cell.setTime(time: alarm.timeLabel)
+        if alarm.time%60 > 9{
+            cell.setTime(time: "\(alarm.time/60):\(alarm.time%60)")
+            
+        } else{
+            cell.setTime(time: "\(alarm.time/60):0\(alarm.time%60)")
+        }
         return cell
     }
 }

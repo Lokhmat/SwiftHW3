@@ -7,31 +7,27 @@
 
 import UIKit
 
-class AlarmView: UIView {
+class TableAlarmView: UITableViewCell {
     private let timeLabel = UILabel()
     private let alarmSwitch = UISwitch()
     private let descriptionLabel = UILabel()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        initView()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func initView(){
+    public func initView(){
+        descriptionLabel.numberOfLines = 2
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.lineBreakMode = .byWordWrapping
         self.addSubview(alarmSwitch)
         self.addSubview(timeLabel)
         self.addSubview(descriptionLabel)
+        backgroundColor = #colorLiteral(red: 0.5050294995, green: 0.5598605871, blue: 0.9583502412, alpha: 1)
         alarmSwitch.pinRight(to: self, 20)
         alarmSwitch.pinCenter(to: self.centerYAnchor)
-        timeLabel.pinLeft(to: self, 30)
-        timeLabel.pinTop(to: self, 10)
+        timeLabel.pinLeft(to: self, 10)
+        timeLabel.pinTop(to: self, 5)
         timeLabel.font = timeLabel.font.withSize(30)
-        descriptionLabel.pinLeft(to: self, 30)
-        descriptionLabel.pinCenter(to: self.centerYAnchor)
+        descriptionLabel.pinLeft(to: timeLabel.trailingAnchor, 10)
+        descriptionLabel.pinRight(to: self, 10)
+        descriptionLabel.pinBottom(to: self, 5)
         descriptionLabel.font = descriptionLabel.font.withSize(15)
     }
     

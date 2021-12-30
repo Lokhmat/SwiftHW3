@@ -19,16 +19,11 @@
 		F633503D272093E4006745C1 /* StackScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503C272093E4006745C1 /* StackScreenRouter.swift */; };
 		F633503F272093F1006745C1 /* StackScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503E272093F1006745C1 /* StackScreenModels.swift */; };
 		F633504C27209BC2006745C1 /* TableScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504327209B1E006745C1 /* TableScreenViewController.swift */; };
-		F633504D27209BC5006745C1 /* TableScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504527209B1E006745C1 /* TableScreenAssembly.swift */; };
-		F633504E27209BC7006745C1 /* TableScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504027209B1D006745C1 /* TableScreenInteractor.swift */; };
-		F633504F27209BCA006745C1 /* TableScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504127209B1D006745C1 /* TableScreenPresenter.swift */; };
-		F633505027209BCC006745C1 /* TableScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504227209B1D006745C1 /* TableScreenRouter.swift */; };
-		F633505127209BCE006745C1 /* TableScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504427209B1E006745C1 /* TableScreenModels.swift */; };
-		F633505427209C2E006745C1 /* CollectionScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504627209B20006745C1 /* CollectionScreenModels.swift */; };
-		F6335062272B2F62006745C1 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6335061272B2F62006745C1 /* AlarmView.swift */; };
+		F633505427209C2E006745C1 /* AlarmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504627209B20006745C1 /* AlarmModels.swift */; };
 		F6777061277B7BC30025133B /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777060277B7BC30025133B /* UIViewPin.swift */; };
 		F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777062277CB75B0025133B /* CollectionScreenViewController.swift */; };
 		F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777064277CC0860025133B /* CollectionAlarmView.swift */; };
+		F6777068277DEE560025133B /* TableAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777067277DEE560025133B /* TableAlarmView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,17 +40,12 @@
 		F633503A272093AF006745C1 /* StackScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenPresenter.swift; sourceTree = "<group>"; };
 		F633503C272093E4006745C1 /* StackScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenRouter.swift; sourceTree = "<group>"; };
 		F633503E272093F1006745C1 /* StackScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenModels.swift; sourceTree = "<group>"; };
-		F633504027209B1D006745C1 /* TableScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenInteractor.swift; sourceTree = "<group>"; };
-		F633504127209B1D006745C1 /* TableScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenPresenter.swift; sourceTree = "<group>"; };
-		F633504227209B1D006745C1 /* TableScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenRouter.swift; sourceTree = "<group>"; };
 		F633504327209B1E006745C1 /* TableScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenViewController.swift; sourceTree = "<group>"; };
-		F633504427209B1E006745C1 /* TableScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenModels.swift; sourceTree = "<group>"; };
-		F633504527209B1E006745C1 /* TableScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenAssembly.swift; sourceTree = "<group>"; };
-		F633504627209B20006745C1 /* CollectionScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenModels.swift; sourceTree = "<group>"; };
-		F6335061272B2F62006745C1 /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
+		F633504627209B20006745C1 /* AlarmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModels.swift; sourceTree = "<group>"; };
 		F6777060277B7BC30025133B /* UIViewPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPin.swift; sourceTree = "<group>"; };
 		F6777062277CB75B0025133B /* CollectionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenViewController.swift; sourceTree = "<group>"; };
 		F6777064277CC0860025133B /* CollectionAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAlarmView.swift; sourceTree = "<group>"; };
+		F6777067277DEE560025133B /* TableAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAlarmView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +78,7 @@
 		F633501A2720488F006745C1 /* splokhmatikovPW3 */ = {
 			isa = PBXGroup;
 			children = (
-				F633505A2720A5AE006745C1 /* View */,
+				F6777066277DEE1F0025133B /* Models */,
 				F633503127209284006745C1 /* CollectionScreen */,
 				F633503027209274006745C1 /* TableScreen */,
 				F633502F27209259006745C1 /* StackScreen */,
@@ -120,11 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F633504327209B1E006745C1 /* TableScreenViewController.swift */,
-				F633504527209B1E006745C1 /* TableScreenAssembly.swift */,
-				F633504027209B1D006745C1 /* TableScreenInteractor.swift */,
-				F633504127209B1D006745C1 /* TableScreenPresenter.swift */,
-				F633504227209B1D006745C1 /* TableScreenRouter.swift */,
-				F633504427209B1E006745C1 /* TableScreenModels.swift */,
+				F6777067277DEE560025133B /* TableAlarmView.swift */,
 			);
 			path = TableScreen;
 			sourceTree = "<group>";
@@ -133,18 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				F6777064277CC0860025133B /* CollectionAlarmView.swift */,
-				F633504627209B20006745C1 /* CollectionScreenModels.swift */,
 				F6777062277CB75B0025133B /* CollectionScreenViewController.swift */,
 			);
 			path = CollectionScreen;
 			sourceTree = "<group>";
 		};
-		F633505A2720A5AE006745C1 /* View */ = {
+		F6777066277DEE1F0025133B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F6335061272B2F62006745C1 /* AlarmView.swift */,
+				F633504627209B20006745C1 /* AlarmModels.swift */,
 			);
-			path = View;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,23 +204,18 @@
 				F633503727209387006745C1 /* StackScreenAssembly.swift in Sources */,
 				F633503D272093E4006745C1 /* StackScreenRouter.swift in Sources */,
 				F63350202720488F006745C1 /* ViewController.swift in Sources */,
-				F633505427209C2E006745C1 /* CollectionScreenModels.swift in Sources */,
+				F633505427209C2E006745C1 /* AlarmModels.swift in Sources */,
 				F633501C2720488F006745C1 /* AppDelegate.swift in Sources */,
-				F6335062272B2F62006745C1 /* AlarmView.swift in Sources */,
 				F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */,
-				F633504D27209BC5006745C1 /* TableScreenAssembly.swift in Sources */,
 				F6777061277B7BC30025133B /* UIViewPin.swift in Sources */,
 				F633501E2720488F006745C1 /* SceneDelegate.swift in Sources */,
 				F63350332720934D006745C1 /* StackScreenViewController.swift in Sources */,
 				F633503B272093AF006745C1 /* StackScreenPresenter.swift in Sources */,
 				F633504C27209BC2006745C1 /* TableScreenViewController.swift in Sources */,
-				F633504E27209BC7006745C1 /* TableScreenInteractor.swift in Sources */,
-				F633505127209BCE006745C1 /* TableScreenModels.swift in Sources */,
 				F633503F272093F1006745C1 /* StackScreenModels.swift in Sources */,
 				F633503927209398006745C1 /* StackScreenInteractor.swift in Sources */,
-				F633504F27209BCA006745C1 /* TableScreenPresenter.swift in Sources */,
 				F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */,
-				F633505027209BCC006745C1 /* TableScreenRouter.swift in Sources */,
+				F6777068277DEE560025133B /* TableAlarmView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
