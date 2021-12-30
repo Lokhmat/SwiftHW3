@@ -24,10 +24,11 @@
 		F633504F27209BCA006745C1 /* TableScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504127209B1D006745C1 /* TableScreenPresenter.swift */; };
 		F633505027209BCC006745C1 /* TableScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504227209B1D006745C1 /* TableScreenRouter.swift */; };
 		F633505127209BCE006745C1 /* TableScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504427209B1E006745C1 /* TableScreenModels.swift */; };
-		F633505227209BFA006745C1 /* CollectionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504727209B20006745C1 /* CollectionScreenViewController.swift */; };
 		F633505427209C2E006745C1 /* CollectionScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504627209B20006745C1 /* CollectionScreenModels.swift */; };
 		F6335062272B2F62006745C1 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6335061272B2F62006745C1 /* AlarmView.swift */; };
 		F6777061277B7BC30025133B /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777060277B7BC30025133B /* UIViewPin.swift */; };
+		F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777062277CB75B0025133B /* CollectionScreenViewController.swift */; };
+		F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777064277CC0860025133B /* CollectionAlarmView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +52,10 @@
 		F633504427209B1E006745C1 /* TableScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenModels.swift; sourceTree = "<group>"; };
 		F633504527209B1E006745C1 /* TableScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenAssembly.swift; sourceTree = "<group>"; };
 		F633504627209B20006745C1 /* CollectionScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenModels.swift; sourceTree = "<group>"; };
-		F633504727209B20006745C1 /* CollectionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenViewController.swift; sourceTree = "<group>"; };
 		F6335061272B2F62006745C1 /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		F6777060277B7BC30025133B /* UIViewPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPin.swift; sourceTree = "<group>"; };
+		F6777062277CB75B0025133B /* CollectionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenViewController.swift; sourceTree = "<group>"; };
+		F6777064277CC0860025133B /* CollectionAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAlarmView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +132,9 @@
 		F633503127209284006745C1 /* CollectionScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F633504727209B20006745C1 /* CollectionScreenViewController.swift */,
+				F6777064277CC0860025133B /* CollectionAlarmView.swift */,
 				F633504627209B20006745C1 /* CollectionScreenModels.swift */,
+				F6777062277CB75B0025133B /* CollectionScreenViewController.swift */,
 			);
 			path = CollectionScreen;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				F633505427209C2E006745C1 /* CollectionScreenModels.swift in Sources */,
 				F633501C2720488F006745C1 /* AppDelegate.swift in Sources */,
 				F6335062272B2F62006745C1 /* AlarmView.swift in Sources */,
+				F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */,
 				F633504D27209BC5006745C1 /* TableScreenAssembly.swift in Sources */,
 				F6777061277B7BC30025133B /* UIViewPin.swift in Sources */,
 				F633501E2720488F006745C1 /* SceneDelegate.swift in Sources */,
@@ -226,11 +230,11 @@
 				F633503B272093AF006745C1 /* StackScreenPresenter.swift in Sources */,
 				F633504C27209BC2006745C1 /* TableScreenViewController.swift in Sources */,
 				F633504E27209BC7006745C1 /* TableScreenInteractor.swift in Sources */,
-				F633505227209BFA006745C1 /* CollectionScreenViewController.swift in Sources */,
 				F633505127209BCE006745C1 /* TableScreenModels.swift in Sources */,
 				F633503F272093F1006745C1 /* StackScreenModels.swift in Sources */,
 				F633503927209398006745C1 /* StackScreenInteractor.swift in Sources */,
 				F633504F27209BCA006745C1 /* TableScreenPresenter.swift in Sources */,
+				F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */,
 				F633505027209BCC006745C1 /* TableScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

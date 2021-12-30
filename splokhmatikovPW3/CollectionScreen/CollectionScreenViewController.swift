@@ -1,57 +1,59 @@
 //
-//  CollectionScreenViewController.swift
+//  CollectionView.swift
 //  splokhmatikovPW3
 //
-//  Created by Сергей Лохматиков on 20.10.2021.
+//  Created by Sergey Lokhmatikov on 29.12.2021.
 //
 
 import UIKit
 
-protocol CollectionScreenDisplayLogic {
-    func dislayButtonPressed(viewModel: CollectionScreenModel.ButtonPressed.ViewModel)
-}
-
-class CollectionScreenViewController: UIViewController {
-    typealias Model = CollectionScreenModel
-    private var collection: UICollectionView?
-
+class CollectionScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    private var collection: UICollectionView = {
+        let layoutFlow = UICollectionViewFlowLayout()
+        layoutFlow.sectionInset = UIEdgeInsets(top: 30, left: 15,
+                                               bottom: 20, right: 15)
+        layoutFlow.itemSize = CGSize(width: 175, height: 100)
+        return UICollectionView(frame: .zero, collectionViewLayout: layoutFlow)
+    }()
+    private var alarms: [Alarm] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.systemRed
-        setupCollectionView()
+        view.backgroundColor = .white
+        alarms = DataManager.getAlarms()
+        collection.register(CollectionAlarmView.self, forCellWithReuseIdentifier: "\(CollectionAlarmView.self)")
+        collection.delegate = self
+        collection.dataSource = self
+        collection.backgroundColor = #colorLiteral(red: 0.9353832006, green: 0.9105941057, blue: 0.6760123968, alpha: 1)
+        collection.alwaysBounceVertical = true
+        collection.contentInsetAdjustmentBehavior = .always
+        collection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        view.addSubview(collection)
+        collection.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
+        collection.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
+        collection.pin(to: view, .left, .right)
     }
     
     private func addNewAlarm(_ collection: UICollectionView, time: String, description: String, topMargin: Double) {
-        let newAlarm = AlarmView()
+        let newAlarm = CollectionAlarmView()
         collection.addSubview(newAlarm)
-        newAlarm.pinLeft(to: collection.safeAreaLayoutGuide.leadingAnchor)
-        newAlarm.pinRight(to: collection.safeAreaLayoutGuide.trailingAnchor)
-        newAlarm.pinTop(to: collection, topMargin)
         newAlarm.setHeight(to: 100)
         newAlarm.setTime(time: time)
         newAlarm.setDescription(description: description)
     }
     
-    private func setupCollectionView() {
-        let layoutFlow = UICollectionViewFlowLayout()
-        layoutFlow.sectionInset = UIEdgeInsets(top: 100, left: 100,
-        bottom: 100, right: 100)
-        layoutFlow.itemSize = CGSize(width: 100, height: 100)
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layoutFlow)
-        view.addSubview(collection)
-        collection.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
-        collection.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
-        collection.pin(to: view, .left, .right)
-        collection.backgroundColor = .white
-        self.collection = collection
-        for i in 0..<10{
-            addNewAlarm(collection, time: "\(i)", description: "\(i)", topMargin: 100.0*Double(i))
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return alarms.count
     }
     
-    @objc
-    func kek(){
-        print("aaaa")
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionAlarmView.self)", for: indexPath) as? CollectionAlarmView else {
+            return UICollectionViewCell()
+        }
+        let alarm = alarms[indexPath.row]
+        cell.setDescription(description: alarm.descriptionLabel)
+        cell.setTime(time: alarm.timeLabel)
+        return cell
     }
 }

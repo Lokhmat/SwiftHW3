@@ -7,13 +7,17 @@
 
 import Foundation
 
-struct CollectionScreenModel{
-    enum ButtonPressed{
-        struct Request {
+struct Alarm{
+    public let timeLabel: String
+    public let descriptionLabel: String
+}
+
+class DataManager{
+    public static func getAlarms() -> [Alarm]{
+        var alarms: [Alarm] = []
+        for i in 10..<30{
+            alarms.append(Alarm(timeLabel: "11:\(i)", descriptionLabel: "Wake the fuck up samurai"))
         }
-        struct Response{
-        }
-        struct ViewModel {
-        }
+        return alarms
     }
 }
