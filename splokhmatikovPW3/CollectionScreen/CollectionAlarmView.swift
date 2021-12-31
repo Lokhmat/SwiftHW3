@@ -1,5 +1,5 @@
 //
-//  AlarmView.swift
+//  CollectionAlarmView.swift
 //  splokhmatikovPW3
 //
 //  Created by Сергей Лохматиков on 28.10.2021.

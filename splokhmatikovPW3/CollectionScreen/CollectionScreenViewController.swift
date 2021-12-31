@@ -1,5 +1,5 @@
 //
-//  CollectionView.swift
+//  CollectionScreenViewController.swift
 //  splokhmatikovPW3
 //
 //  Created by Sergey Lokhmatikov on 29.12.2021.
