@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let tabBarController = UITabBarController()
         let viewControllers = [
-            StackScreenAssembly().build(),
+            StackScreenViewController(),
             TableScreenViewController(),
             CollectionScreenViewController()
         ]

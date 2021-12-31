@@ -1,5 +1,5 @@
 //
-//  StackScreenViewController.swift
+//  TableScreenViewController.swift
 //  splokhmatikovPW3
 //
 //  Created by Сергей Лохматиков on 20.10.2021.
@@ -7,45 +7,55 @@
 
 import UIKit
 
-protocol StackScreenDisplayLogic {
-    func dislayButtonPressed(viewModel: StackScreenModel.ButtonPressed.ViewModel)
-}
 
 class StackScreenViewController: UIViewController {
-    typealias Model = StackScreenModel
-    private var collection: UICollectionView?
-    private var interactor: StackScreenBuisnessLogic?
+    private var stack: UIStackView = UIStackView()
+    private var alarms: [Alarm] = []
+    private var elderScroll: UIScrollView = UIScrollView()
+    private let dataManager:DataManager = DataManager()
     
-    func setupViewController(interactor: StackScreenBuisnessLogic) {
-        self.interactor = interactor
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        interactor?.loadButtonPressed(request: StackScreenModel.ButtonPressed.Request())
-        view.backgroundColor = UIColor.systemGreen
         setupStackView()
     }
     
     private func setupStackView() {
-        let layoutFlow = UICollectionViewFlowLayout()
-        layoutFlow.sectionInset = UIEdgeInsets(top: 20, left: 10,
-        bottom: 10, right: 10)
-        layoutFlow.itemSize = CGSize(width: 60, height: 60)
-        let collection = UICollectionView(frame: .zero,
-        collectionViewLayout: layoutFlow)
-        view.addSubview(collection)
-        collection.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
-        collection.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
-        collection.pin(to: view, .left, .right)
-        collection.backgroundColor = .white
-        self.collection = collection
+        elderScroll.frame = view.frame
+        elderScroll.translatesAutoresizingMaskIntoConstraints = false
+        elderScroll.alwaysBounceVertical = true
+        view.backgroundColor = .white
+        view.addSubview(elderScroll)
+        elderScroll.addSubview(stack)
+        stack.backgroundColor = #colorLiteral(red: 0.6811034083, green: 0.9382398725, blue: 0.6863567233, alpha: 1)
+        stack.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
+        stack.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
+        stack.pin(to: view, .left, .right)
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.spacing = 10
+        alarms = dataManager.getAlarms()
+        alarms.sort(by: {$0.time < $1.time})
+        setAlarms()
     }
-}
-
-extension StackScreenViewController: StackScreenDisplayLogic {
-    func dislayButtonPressed(viewModel: Model.ButtonPressed.ViewModel) {
-        
+    
+    private func setAlarms() {
+        stack.subviews.forEach({ $0.removeFromSuperview()})
+        elderScroll.contentSize.height = 0
+        for i in 0..<alarms.count {
+            let alarm = StackAlarmView()
+            alarm.initView()
+            if alarms[i].time%60 > 9{
+                alarm.setTime(time: "\(alarms[i].time/60):\(alarms[i].time%60)")
+                
+            } else{
+                alarm.setTime(time: "\(alarms[i].time/60):0\(alarms[i].time%60)")
+            }
+            alarm.setDescription(description: alarms[i].descriptionLabel)
+            alarm.setSwitch(isOn: alarms[i].isOn)
+            let systemLayoutSizeFitting = alarm.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+            elderScroll.contentSize.height += systemLayoutSizeFitting.height + 10
+            stack.addArrangedSubview(alarm)
+        }
     }
+    
 }

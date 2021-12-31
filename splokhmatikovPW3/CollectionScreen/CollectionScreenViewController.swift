@@ -16,12 +16,10 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
         layoutFlow.itemSize = CGSize(width: 175, height: 100)
         return UICollectionView(frame: .zero, collectionViewLayout: layoutFlow)
     }()
-    private var alarms: [Alarm] = []
+    private var dataManager: DataManager = DataManager()
     
     fileprivate func setupView() {
         view.backgroundColor = .white
-        alarms = DataManager.getAlarms()
-        alarms.sort(by: {$0.time < $1.time})
         collection.register(CollectionAlarmView.self, forCellWithReuseIdentifier: "\(CollectionAlarmView.self)")
         collection.delegate = self
         collection.dataSource = self
@@ -39,6 +37,10 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        collection.reloadData()
+    }
+    
     private func addNewAlarm(_ collection: UICollectionView, time: String, description: String, topMargin: Double) {
         let newAlarm = CollectionAlarmView()
         collection.addSubview(newAlarm)
@@ -48,15 +50,18 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return alarms.count
+        return dataManager.getAlarms().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionAlarmView.self)", for: indexPath) as? CollectionAlarmView else {
             return UICollectionViewCell()
         }
-        let alarm = alarms[indexPath.row]
+        let alarm = dataManager.getAlarms()[indexPath.row]
         cell.setDescription(description: alarm.descriptionLabel)
+        cell.alarmSwitch.tag = indexPath.row
+        cell.alarmSwitch.addTarget(self, action: #selector(change(sender: )), for: .valueChanged)
+        cell.setSwitch(isOn: alarm.isOn)
         if alarm.time%60 > 9{
             cell.setTime(time: "\(alarm.time/60):\(alarm.time%60)")
             
@@ -64,5 +69,10 @@ class CollectionScreenViewController: UIViewController, UICollectionViewDelegate
             cell.setTime(time: "\(alarm.time/60):0\(alarm.time%60)")
         }
         return cell
+    }
+    
+    @objc
+    func change(sender: UISwitch){
+        dataManager.editAlarm(id: sender.tag)
     }
 }

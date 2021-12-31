@@ -9,7 +9,7 @@ import UIKit
 
 class CollectionAlarmView: UICollectionViewCell {
     private let timeLabel = UILabel()
-    private let alarmSwitch = UISwitch()
+    public let alarmSwitch = UISwitch()
     private let descriptionLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -47,6 +47,9 @@ class CollectionAlarmView: UICollectionViewCell {
     
     public func setDescription(description: String){
         descriptionLabel.text = description
+    }
+    public func setSwitch(isOn: Bool){
+        alarmSwitch.isOn = isOn
     }
 }
 

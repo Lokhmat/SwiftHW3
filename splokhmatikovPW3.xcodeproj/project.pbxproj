@@ -13,17 +13,16 @@
 		F633502527204893006745C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F633502427204893006745C1 /* Assets.xcassets */; };
 		F633502827204893006745C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F633502627204893006745C1 /* LaunchScreen.storyboard */; };
 		F63350332720934D006745C1 /* StackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63350322720934D006745C1 /* StackScreenViewController.swift */; };
-		F633503727209387006745C1 /* StackScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503627209387006745C1 /* StackScreenAssembly.swift */; };
-		F633503927209398006745C1 /* StackScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503827209398006745C1 /* StackScreenInteractor.swift */; };
-		F633503B272093AF006745C1 /* StackScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503A272093AF006745C1 /* StackScreenPresenter.swift */; };
-		F633503D272093E4006745C1 /* StackScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503C272093E4006745C1 /* StackScreenRouter.swift */; };
-		F633503F272093F1006745C1 /* StackScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633503E272093F1006745C1 /* StackScreenModels.swift */; };
 		F633504C27209BC2006745C1 /* TableScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504327209B1E006745C1 /* TableScreenViewController.swift */; };
 		F633505427209C2E006745C1 /* AlarmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633504627209B20006745C1 /* AlarmModels.swift */; };
 		F6777061277B7BC30025133B /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777060277B7BC30025133B /* UIViewPin.swift */; };
 		F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777062277CB75B0025133B /* CollectionScreenViewController.swift */; };
 		F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777064277CC0860025133B /* CollectionAlarmView.swift */; };
 		F6777068277DEE560025133B /* TableAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777067277DEE560025133B /* TableAlarmView.swift */; };
+		F677706A277E40190025133B /* StackAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6777069277E40190025133B /* StackAlarmView.swift */; };
+		F677706D277F1CE70025133B /* CoreDataAlarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F677706B277F1CE70025133B /* CoreDataAlarms.xcdatamodeld */; };
+		F6777070277F1DAB0025133B /* Alarm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677706E277F1DAB0025133B /* Alarm+CoreDataClass.swift */; };
+		F6777071277F1DAB0025133B /* Alarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677706F277F1DAB0025133B /* Alarm+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,17 +34,16 @@
 		F633502727204893006745C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F633502927204893006745C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63350322720934D006745C1 /* StackScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenViewController.swift; sourceTree = "<group>"; };
-		F633503627209387006745C1 /* StackScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenAssembly.swift; sourceTree = "<group>"; };
-		F633503827209398006745C1 /* StackScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenInteractor.swift; sourceTree = "<group>"; };
-		F633503A272093AF006745C1 /* StackScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenPresenter.swift; sourceTree = "<group>"; };
-		F633503C272093E4006745C1 /* StackScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenRouter.swift; sourceTree = "<group>"; };
-		F633503E272093F1006745C1 /* StackScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenModels.swift; sourceTree = "<group>"; };
 		F633504327209B1E006745C1 /* TableScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenViewController.swift; sourceTree = "<group>"; };
 		F633504627209B20006745C1 /* AlarmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModels.swift; sourceTree = "<group>"; };
 		F6777060277B7BC30025133B /* UIViewPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPin.swift; sourceTree = "<group>"; };
 		F6777062277CB75B0025133B /* CollectionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreenViewController.swift; sourceTree = "<group>"; };
 		F6777064277CC0860025133B /* CollectionAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAlarmView.swift; sourceTree = "<group>"; };
 		F6777067277DEE560025133B /* TableAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAlarmView.swift; sourceTree = "<group>"; };
+		F6777069277E40190025133B /* StackAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAlarmView.swift; sourceTree = "<group>"; };
+		F677706C277F1CE70025133B /* CoreDataAlarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataAlarms.xcdatamodel; sourceTree = "<group>"; };
+		F677706E277F1DAB0025133B /* Alarm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F677706F277F1DAB0025133B /* Alarm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +60,7 @@
 		F633500F2720488F006745C1 = {
 			isa = PBXGroup;
 			children = (
+				F677706B277F1CE70025133B /* CoreDataAlarms.xcdatamodeld */,
 				F633501A2720488F006745C1 /* splokhmatikovPW3 */,
 				F63350192720488F006745C1 /* Products */,
 			);
@@ -96,12 +95,8 @@
 		F633502F27209259006745C1 /* StackScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F6777069277E40190025133B /* StackAlarmView.swift */,
 				F63350322720934D006745C1 /* StackScreenViewController.swift */,
-				F633503627209387006745C1 /* StackScreenAssembly.swift */,
-				F633503827209398006745C1 /* StackScreenInteractor.swift */,
-				F633503A272093AF006745C1 /* StackScreenPresenter.swift */,
-				F633503C272093E4006745C1 /* StackScreenRouter.swift */,
-				F633503E272093F1006745C1 /* StackScreenModels.swift */,
 			);
 			path = StackScreen;
 			sourceTree = "<group>";
@@ -127,6 +122,8 @@
 		F6777066277DEE1F0025133B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F677706E277F1DAB0025133B /* Alarm+CoreDataClass.swift */,
+				F677706F277F1DAB0025133B /* Alarm+CoreDataProperties.swift */,
 				F633504627209B20006745C1 /* AlarmModels.swift */,
 			);
 			path = Models;
@@ -201,20 +198,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F633503727209387006745C1 /* StackScreenAssembly.swift in Sources */,
-				F633503D272093E4006745C1 /* StackScreenRouter.swift in Sources */,
 				F63350202720488F006745C1 /* ViewController.swift in Sources */,
 				F633505427209C2E006745C1 /* AlarmModels.swift in Sources */,
 				F633501C2720488F006745C1 /* AppDelegate.swift in Sources */,
 				F6777063277CB75B0025133B /* CollectionScreenViewController.swift in Sources */,
 				F6777061277B7BC30025133B /* UIViewPin.swift in Sources */,
 				F633501E2720488F006745C1 /* SceneDelegate.swift in Sources */,
+				F6777070277F1DAB0025133B /* Alarm+CoreDataClass.swift in Sources */,
+				F6777071277F1DAB0025133B /* Alarm+CoreDataProperties.swift in Sources */,
 				F63350332720934D006745C1 /* StackScreenViewController.swift in Sources */,
-				F633503B272093AF006745C1 /* StackScreenPresenter.swift in Sources */,
 				F633504C27209BC2006745C1 /* TableScreenViewController.swift in Sources */,
-				F633503F272093F1006745C1 /* StackScreenModels.swift in Sources */,
-				F633503927209398006745C1 /* StackScreenInteractor.swift in Sources */,
+				F677706A277E40190025133B /* StackAlarmView.swift in Sources */,
 				F6777065277CC0860025133B /* CollectionAlarmView.swift in Sources */,
+				F677706D277F1CE70025133B /* CoreDataAlarms.xcdatamodeld in Sources */,
 				F6777068277DEE560025133B /* TableAlarmView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +405,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F677706B277F1CE70025133B /* CoreDataAlarms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F677706C277F1CE70025133B /* CoreDataAlarms.xcdatamodel */,
+			);
+			currentVersion = F677706C277F1CE70025133B /* CoreDataAlarms.xcdatamodel */;
+			path = CoreDataAlarms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F63350102720488F006745C1 /* Project object */;
 }
